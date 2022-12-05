@@ -1,17 +1,8 @@
 import React from 'react';
+import Root from '../components/Root';
 
 const Home = () => {
-  return (
-    <div style={{
-      minHeight: '100vh',
-      minWidth: '100vw',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      Hello world
-    </div>
-  )
+  return <Root />
 }
 
 export default Home
