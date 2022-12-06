@@ -2,9 +2,10 @@ import React, { useCallback, useState } from 'react';
 import Header from './header/Header';
 import styles from './Root.module.css'
 import Drawer from './drawer/Drawer';
-import MeditationsMenu from './meditation-menu/MeditationsMenu';
+import MeditationsMenu from './meditation/menu/MeditationsMenu';
 import meditiations from '../ressources/meditations';
-import MeditationContent from './meditation-content/MeditationContent';
+import MeditationContent from './meditation/content/MeditationContent';
+import MediationTitle from './meditation/title/MeditationTitle';
 
 const Root = (props) => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -25,7 +26,9 @@ const Root = (props) => {
 
     return (
         <div className={styles.root}>
-          <Header title={meditation.title} subtitle={meditation.subtitle} handleDrawerOpenClose={handleDrawerOpenClose}/>
+          <Header title={meditation.title} subtitle={meditation.subtitle} handleDrawerOpenClose={handleDrawerOpenClose}>
+            <MediationTitle title={meditation.title} subtitle={meditation.subtitle}/>
+          </Header>
           <div className={styles.contentWrapper}>
             <Drawer open={showDrawer} onClose={handleDrawer(false)}>
               <MeditationsMenu handleSelectMeditation={handleSelectMeditation}/>

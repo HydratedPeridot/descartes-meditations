@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import meditiations from '../../ressources/meditations';
+import meditiations from '../../../ressources/meditations';
 import styles from './MeditationsMenu.module.css'
 
 const MeditationsMenu = (props) => {

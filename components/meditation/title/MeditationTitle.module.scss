@@ -1,0 +1,19 @@
+.titleWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: large;
+        font-style: italic;
+        text-align: center;
+    }
+}

@@ -5,26 +5,19 @@ import styles from './Header.module.scss'
 
 
 const Header = (props) => {
-    const { title, subtitle, handleDrawerOpenClose } = props
+    const { handleDrawerOpenClose, children } = props
 
     return (
         <div className={styles.header}>
             <AiOutlineMenu className={styles.menuButton} onClick={handleDrawerOpenClose}/>
-            <div className={styles.titleWrapper}>
-                <div className={styles.title}>
-                    {title}
-                </div>
-                <div className={styles.subtitle}>
-                    {subtitle}
-                </div>
-            </div>
+            {children}
         </div>
     )
 }
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired,
-    handleDrawerOpenClose: PropTypes.func.isRequired
+    handleDrawerOpenClose: PropTypes.func.isRequired,
+    children: PropTypes.object
 }
  
 export default Header
