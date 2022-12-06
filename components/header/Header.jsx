@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AiOutlineMenu } from 'react-icons/ai'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 
 const Header = (props) => {
-    const { title, handleMenuOpenClose } = props
+    const { title, subtitle, handleDrawerOpenClose } = props
 
     return (
         <div className={styles.header}>
-            <AiOutlineMenu className={styles.menuButton} onClick={handleMenuOpenClose}/>
-            <div className={styles.title}>
-                {title}
+            <AiOutlineMenu className={styles.menuButton} onClick={handleDrawerOpenClose}/>
+            <div className={styles.titleWrapper}>
+                <div className={styles.title}>
+                    {title}
+                </div>
+                <div className={styles.subtitle}>
+                    {subtitle}
+                </div>
             </div>
         </div>
     )
@@ -19,7 +24,7 @@ const Header = (props) => {
 
 Header.propTypes = {
     title: PropTypes.string.isRequired,
-    handleMenuOpenClose: PropTypes.func.isRequired
+    handleDrawerOpenClose: PropTypes.func.isRequired
 }
  
-export default Header;
+export default Header
