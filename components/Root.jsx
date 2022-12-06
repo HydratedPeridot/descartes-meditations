@@ -31,7 +31,7 @@ const Root = (props) => {
   }
 
     return (
-        <div className={styles.root}>
+        <div>
           <Modal open={showModal} hide={toggleModal} />
           <Header title={meditation.title} subtitle={meditation.subtitle} toggleDrawer={toggleDrawer}>
             <MediationTitle title={meditation.title} subtitle={meditation.subtitle}/>

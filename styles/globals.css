@@ -1,8 +1,13 @@
-html,
+html {
+  overflow: hidden;
+  width: 100%;
+}
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  overflow-y: auto;
 }
