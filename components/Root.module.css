@@ -8,6 +8,6 @@
 .contentWrapper {
     perspective: initial;
     display: flex;
-    height: 94vh;
+    height: 93vh;
     box-sizing: border-box;
 }

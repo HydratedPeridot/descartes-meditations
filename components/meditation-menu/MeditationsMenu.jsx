@@ -8,9 +8,9 @@ const MeditationsMenu = (props) => {
 
     return (
         <div className={styles.menu}>
-            {meditiations.map((item, key) => {
+            {meditiations.map((item) => {
                 return (
-                    <div className={styles.itemWrapper} onClick={handleSelectMeditation(item)}>
+                    <div key={item.id} className={styles.itemWrapper} onClick={handleSelectMeditation(item)}>
                         <div className={styles.title}>
                             {item.title}
                         </div>
@@ -27,7 +27,7 @@ const MeditationsMenu = (props) => {
 }
 
 MeditationsMenu.propTypes = {
-    selectMeditation: PropTypes.func.isRequired
+    handleSelectMeditation: PropTypes.func.isRequired
 }
 
 export default MeditationsMenu

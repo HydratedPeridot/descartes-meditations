@@ -1,0 +1,13 @@
+.content {
+    box-sizing: border-box;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    overflow-y: auto;
+    word-break: break-word;
+
+    p {
+        text-indent: 2vw;
+    }
+}
