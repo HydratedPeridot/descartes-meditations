@@ -1,0 +1,46 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.itemWrapper {
+    position: relative;
+    width: 100%;
+    height: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemWrapper:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.itemWrapper::before {
+    content : "";
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 90%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.itemWrapper:last-child::before {
+    border-bottom: none;
+}
+
+.title {
+    font-size: larger;
+}
+
+.subtitle {
+    font-size: medium;
+}
+
+
+

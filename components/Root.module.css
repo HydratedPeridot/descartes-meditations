@@ -6,7 +6,8 @@
 }
 
 .contentWrapper {
-    position: relative;
+    perspective: initial;
     flex: 1;
     display: flex;
+
 }
