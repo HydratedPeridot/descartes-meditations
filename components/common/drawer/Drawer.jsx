@@ -1,6 +1,6 @@
-import React, { use, useEffect, useState } from 'react';
-import styles from './Drawer.module.css';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import styles from './Drawer.module.scss';
 
 const Drawer = (props) => {
     const { open, onClose, children } = props
