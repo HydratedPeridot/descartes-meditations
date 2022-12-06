@@ -1,47 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import styles from './Drawer.module.css';
 import PropTypes from 'prop-types';
 
 const Drawer = (props) => {
-    const { showDrawer, handleDrawerOpenClose, children } = props
+    const { open, onClose, children } = props
 
-    const [isVisible, setIsVisible] = useState(false)
+    const [visible, setVisible] = useState(open)
 
     useEffect(() => {
-        setIsVisible(true);
-    }, [showDrawer])
+        if (open) {
+            setVisible(true)
+        }
+    }, [open])
 
     const handleTransitionEnd = () => {
-        if (!showDrawer) {
-            setIsVisible(false)
+        if (!open) {
+            setVisible(false)
         }
     }
 
-    const handleBackDropClick = () => {
-        if (showDrawer) {
-            handleDrawerOpenClose()
-        }
-    }
-
-    const drawerStyle = `${styles.drawer} ${showDrawer ? styles.opened : styles.closed}`
-    const backdropStyle = `${styles.drawerBackdrop} ${showDrawer ? styles.opaque : styles.transparent}`
+    const drawerStyle = `${styles.drawer} ${open ? styles.opened : styles.closed}`
+    const backdropStyle = `${styles.drawerBackdrop} ${open ? styles.opaque : styles.transparent}`
 
     return (
         <div className={styles.drawerWrapper} style={{
-            visibility: isVisible? 'visible' : 'hidden'
+            visibility: (visible)? 'visible' : 'hidden'
         }}
         >
             <div className={drawerStyle} onTransitionEnd={handleTransitionEnd}>
                 {children}
             </div>
-            <div className={backdropStyle} onClick={handleBackDropClick}/>
+            <div className={backdropStyle} onClick={() => onClose()}/>
         </div>
     )
 }
 
-Drawer.PropTypes = {
-    showDrawer: PropTypes.bool.isRequired,
-    handleDrawerOpenClose: PropTypes.func.isRequired,
+Drawer.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
     children: PropTypes.object
 }
 

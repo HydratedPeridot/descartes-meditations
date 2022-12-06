@@ -8,7 +8,11 @@ import meditiations from '../ressources/meditations';
 const Root = (props) => {
   const [showDrawer, setShowDrawer] = useState(false);
   const [currentMeditation, setCurrentMeditation] = useState(meditiations[0])
-  
+
+  const handleDrawer = (open) => () => {
+    setShowDrawer(open)
+  }
+
   const handleDrawerOpenClose = () => {
     setShowDrawer(current => !current)
   }
@@ -22,7 +26,7 @@ const Root = (props) => {
         <div className={styles.root}>
           <Header title={currentMeditation.title} subtitle={currentMeditation.subtitle} handleDrawerOpenClose={handleDrawerOpenClose}/>
           <div className={styles.contentWrapper}>
-            <Drawer showDrawer={showDrawer} handleDrawerOpenClose={handleDrawerOpenClose}>
+            <Drawer open={showDrawer} onClose={handleDrawer(false)}>
               <MeditationsMenu handleSelectMeditation={handleSelectMeditation}/>
             </Drawer>
             <div style={{
