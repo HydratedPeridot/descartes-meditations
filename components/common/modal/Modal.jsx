@@ -1,35 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import PropTypes from 'prop-types';
+import useModalTransition from '../../../hooks/useModalTransition';
 import styles from './Modal.module.scss'
 
 
+const modalTransitionDuration = 400;
+
 const Modal = (props) => {
-    const { open, hide, children } = props
+    const { open, onClose, children } = props
 
-    const [visible, setVisible] = useState(open)
+    const { overlayStyle, handleClose, handleTransitionEnd } = useModalTransition(open, onClose, modalTransitionDuration)
 
-    useEffect(() => {
-        if (open) {
-            setVisible(true)
-        }
-    }, [open])
-
-    const handleTransitionEnd = () => {
-        if (!open) {
-            setVisible(false)
-        }
-    }
-
-    const modalStyle = `${styles.modal} ${open ? styles.opened : styles.closed}`
-    const backdropStyle = `${styles.modalBackdrop} ${open ? styles.opaque : styles.transparent}`
-
-    return (       
-        <div className={styles.modalWrapper} style={{
-            visibility: (visible)? 'visible' : 'hidden'
-        }}>
-            <div className={modalStyle} onTransitionEnd={handleTransitionEnd}>
+    return (
+        <div className={styles.modalOverlay} style={overlayStyle} onTransitionEnd={handleTransitionEnd} onClick={handleClose}>
+            <div className={styles.modal} style={{
+                transform: open? 'none' : 'scale(0)',
+                opacity: open? '1' : '0',
+                transition: `all ${modalTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
+            }}>
                 {children}
             </div>
-            <div className={backdropStyle} onClick={hide} />
         </div>
     )
 }

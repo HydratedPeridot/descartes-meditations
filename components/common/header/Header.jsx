@@ -5,18 +5,18 @@ import styles from './Header.module.scss'
 
 
 const Header = (props) => {
-    const { toggleDrawer, children } = props
+    const { openMenu, children } = props
 
     return (
         <div className={styles.header}>
-            <AiOutlineMenu className={styles.menuButton} onClick={toggleDrawer}/>
+            <AiOutlineMenu className={styles.menuButton} onClick={openMenu}/>
             {children}
         </div>
     )
 }
 
 Header.propTypes = {
-    toggleDrawer: PropTypes.func.isRequired,
+    openMenu: PropTypes.func.isRequired,
     children: PropTypes.object
 }
  

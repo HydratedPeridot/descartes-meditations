@@ -1,36 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import useModalTransition from '../../../hooks/useModalTransition';
 import styles from './Drawer.module.scss';
+
+const drawerTransitionDuration = 400;
 
 const Drawer = (props) => {
     const { open, onClose, children } = props
 
-    const [visible, setVisible] = useState(open)
-
-    useEffect(() => {
-        if (open) {
-            setVisible(true)
-        }
-    }, [open])
-
-    const handleTransitionEnd = () => {
-        if (!open) {
-            setVisible(false)
-        }
-    }
-
-    const drawerStyle = `${styles.drawer} ${open ? styles.opened : styles.closed}`
-    const backdropStyle = `${styles.drawerBackdrop} ${open ? styles.opaque : styles.transparent}`
+    const { overlayStyle, handleClose, handleTransitionEnd } = useModalTransition(open, onClose, drawerTransitionDuration)
 
     return (
-        <div className={styles.drawerWrapper} style={{
-            visibility: (visible)? 'visible' : 'hidden'
-        }}
-        >
-            <div className={drawerStyle} onTransitionEnd={handleTransitionEnd}>
+        <div className={styles.drawerOverlay} style={overlayStyle} onTransitionEnd={handleTransitionEnd} onClick={handleClose}>
+            <div className={styles.drawer} style={{
+                transform: open? 'none' : 'translateX(-40vw)',
+                boxShadow: open? '1vw 3vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
+                transition: `all ${drawerTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
+            }}>
                 {children}
             </div>
-            <div className={backdropStyle} onClick={() => onClose()}/>
         </div>
     )
 }
