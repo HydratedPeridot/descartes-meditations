@@ -1,5 +1,5 @@
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
 body {
@@ -9,5 +9,5 @@ body {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   position: fixed;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }

@@ -1,10 +1,21 @@
-.titleWrapper {
+.header {
     width: 100%;
-    height: 100%;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 5vh rgba(0, 0, 0, 0.5);
+    box-sizing: 'border-box';
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.titleWrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 12px;
 
     .title {
         font-size: x-large;
@@ -17,3 +28,17 @@
         text-align: center;
     }
 }
+
+.menuButton {
+    position: absolute;
+    transition: transform 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: scale(1.4);
+    margin-left: 1%;
+    z-index: 10;
+}
+
+.menuButton:hover {
+    cursor: pointer;
+    transform: scale(2);
+}
+

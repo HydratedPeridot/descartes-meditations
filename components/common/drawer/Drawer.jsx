@@ -13,7 +13,7 @@ const Drawer = (props) => {
     return (
         <div className={styles.drawerOverlay} style={overlayStyle} onTransitionEnd={handleTransitionEnd} onClick={handleClose}>
             <div className={styles.drawer} style={{
-                transform: open? 'none' : 'translateX(-40vw)',
+                transform: open? 'none' : 'translateX(-100%)',
                 boxShadow: open? '1vw 3vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
                 transition: `all ${drawerTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
             }}>

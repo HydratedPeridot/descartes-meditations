@@ -1,6 +1,9 @@
 .contentWrapper {
-    perspective: initial;
     display: flex;
-    height: 93vh;
-    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+}
+
+.root {
+    height: 100vh;
 }
