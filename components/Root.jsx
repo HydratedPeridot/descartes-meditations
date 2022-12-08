@@ -29,8 +29,8 @@ const Root = (props) => {
           <div className={styles.contentWrapper}>
             <MeditationTitle title={meditation.title} subtitle={meditation.subtitle} openMenu={showMenu} />
             <MeditationContent id={meditation.id} openModal={showObjection}/>
-            <ObjectionDrawer open={objectionOpen} closeObjection={hideObjection}/>
           </div>
+            <ObjectionDrawer open={objectionOpen} closeObjection={hideObjection}/>
         </div>
       )
 }

@@ -7,9 +7,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
   position: fixed;
-  /* overflow-y: auto; */
 }
 
 p {

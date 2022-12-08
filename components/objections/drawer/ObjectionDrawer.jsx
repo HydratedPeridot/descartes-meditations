@@ -10,13 +10,13 @@ const ObjectionDrawer = (props) => {
     return <div 
         className={styles.objectionDrawer} 
         style={{
-            height: open? '40vh' : '0%',
+            height: open? '45%' : '0%',
             transition: 'height 400ms cubic-bezier(0.23, 1, 0.320, 1)',
         }}
     >
         <div className={styles.header}>
             <div className={styles.title}>
-                Lorem Ipsum
+                Lorem ipsum dolor sit amet
             </div>
             <GrClose className={styles.closeButton} onClick={closeObjection}/>
         </div>

@@ -1,4 +1,5 @@
 .content {
+    height: 100%;
     padding-top: 6vh;
     padding-bottom: 6vh;
     padding-left: 12vw;
@@ -6,5 +7,13 @@
     word-break: break-word;
     text-align: justify;
     box-sizing: border-box;
-    overflow-y: auto;
+    font-size: large;
+}
+
+.tocome {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
 }
