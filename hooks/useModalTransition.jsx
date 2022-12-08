@@ -25,7 +25,7 @@ const useModalTransition = (open, onClose, transitionDuration) => {
     const overlayStyle = {
         visibility: visible? 'visible' : 'hidden',
         backgroundColor: open? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)',
-        transition: `all ${transitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`,
+        transition: `backgroundColor ${transitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`,
     }
 
     return { visible, overlayStyle, handleClose, handleTransitionEnd }

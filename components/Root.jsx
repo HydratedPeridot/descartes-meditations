@@ -7,26 +7,29 @@ import MeditationContent from './meditation/content/MeditationContent';
 import MeditationTitle from './meditation/title/MeditationTitle';
 import meditiations from '../ressources/meditations';
 import styles from './Root.module.scss'
+import ObjectionDrawer from './objections/drawer/ObjectionDrawer';
 
 const Root = (props) => {
   const [meditation, setMeditation] = useState(meditiations[0])
-  const {open: drawerOpen, show: showDrawer, hide: hideDrower} = useModal(false)
-  const {open: modalOpen, show: showModal, hide: hideModal} = useModal(false)
+  const {open: menuOpen, show: showMenu, hide: hideMenu} = useModal(false)
+  const {open: objectionOpen, show: showObjection, hide: hideObjection} = useModal(false)
 
   const handleSelectMeditation = (meditation) => () => {
     setMeditation(meditation)
-    hideDrower()
+    hideObjection()
+    hideMenu()
   }
 
     return (
         <div className={styles.root}>
-          <Modal open={modalOpen} onClose={hideModal} />
-          <Drawer open={drawerOpen} onClose={hideDrower}>
-            <MeditationsMenu closeMenu={hideDrower} handleSelectMeditation={handleSelectMeditation}/>
+          {/* <Modal open={objectionOpen} onClose={hideObjection} /> */}
+          <Drawer open={menuOpen} onClose={hideMenu}>
+            <MeditationsMenu closeMenu={hideMenu} handleSelectMeditation={handleSelectMeditation}/>
           </Drawer>
           <div className={styles.contentWrapper}>
-            <MeditationTitle title={meditation.title} subtitle={meditation.subtitle} openMenu={showDrawer} />
-            <MeditationContent id={meditation.id} openModal={showModal}/>
+            <MeditationTitle title={meditation.title} subtitle={meditation.subtitle} openMenu={showMenu} />
+            <MeditationContent id={meditation.id} openModal={showObjection}/>
+            <ObjectionDrawer open={objectionOpen} closeObjection={hideObjection}/>
           </div>
         </div>
       )

@@ -15,7 +15,7 @@ const Drawer = (props) => {
             <div className={styles.drawer} style={{
                 transform: open? 'none' : 'translateX(-100%)',
                 boxShadow: open? '1vw 3vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
-                transition: `all ${drawerTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
+                transition: `transform ${drawerTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1), box-shadow ${drawerTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
             }}>
                 {children}
             </div>

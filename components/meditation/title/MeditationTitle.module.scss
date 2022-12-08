@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 1.5vh;
 
     .title {
         font-size: x-large;
@@ -33,7 +33,7 @@
     position: absolute;
     transition: transform 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
     transform: scale(1.4);
-    margin-left: 1%;
+    margin-left: 1vw;
     z-index: 10;
 }
 

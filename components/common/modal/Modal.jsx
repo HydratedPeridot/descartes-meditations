@@ -14,9 +14,9 @@ const Modal = (props) => {
     return (
         <div className={styles.modalOverlay} style={overlayStyle} onTransitionEnd={handleTransitionEnd} onClick={handleClose}>
             <div className={styles.modal} style={{
-                transform: open? 'none' : 'scale(0)',
+                transform: open? 'none' : 'scale(0.5)',
                 opacity: open? '1' : '0',
-                transition: `all ${modalTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
+                transition: `transform ${modalTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1), opacity ${modalTransitionDuration}ms cubic-bezier(0.23, 1, 0.320, 1)`
             }}>
                 {children}
             </div>
