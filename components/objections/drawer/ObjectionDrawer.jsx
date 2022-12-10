@@ -3,23 +3,22 @@ import PropTypes from 'prop-types';
 import { GrClose } from 'react-icons/gr'
 import ObjectionContent from '../content/ObjectionContent';
 import styles from './ObjectionDrawer.module.scss'
+import ObjectionTitle from '../title/ObjectionTitle';
+
+const transitionDuration = 300
 
 const ObjectionDrawer = (props) => {
-    const { open, closeObjection } = props
+    const { objection, open, closeObjection } = props
 
     return <div 
         className={styles.objectionDrawer} 
         style={{
-            height: open? '45%' : '0%',
-            transition: 'height 400ms cubic-bezier(0.23, 1, 0.320, 1)',
+            width: open? '60%' : '0%',
+            boxShadow: open? '-1vw 0vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
+            transition: `width ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`
         }}
     >
-        <div className={styles.header}>
-            <div className={styles.title}>
-                Lorem ipsum dolor sit amet
-            </div>
-            <GrClose className={styles.closeButton} onClick={closeObjection}/>
-        </div>
+        <ObjectionTitle title={objection.title} subtitle={objection.subtitle} closeObjection={closeObjection}/>
         <div className={styles.contentWrapper}>
             <ObjectionContent />
             <ObjectionContent />
@@ -28,6 +27,7 @@ const ObjectionDrawer = (props) => {
 }
 
 ObjectionDrawer.propTypes = {
+    objection: PropTypes.object.isRequired,
     open: PropTypes.bool.isRequired,
     closeObjection: PropTypes.func.isRequired
 }

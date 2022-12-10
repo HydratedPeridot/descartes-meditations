@@ -1,8 +1,8 @@
 .content {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: 18%; // clamp
+    padding-right: 18%;
     word-break: break-word;
     text-align: justify;
     box-sizing: border-box;
@@ -11,6 +11,7 @@
 
 .tocome {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

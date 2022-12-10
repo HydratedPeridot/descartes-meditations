@@ -9,7 +9,7 @@ const MeditationTitle = (props) => {
 
     return (
         <div className={styles.header}>
-            <AiOutlineMenu className={styles.menuButton} onClick={openMenu}/>
+            <AiOutlineMenu className={styles.menuButton} onClick={openMenu} size='2em'/>
             <div className={styles.titleWrapper}>
                 <div className={styles.title}>
                     {title}
