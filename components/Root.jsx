@@ -11,6 +11,7 @@ import styles from './Root.module.scss'
 
 const Root = (props) => {
   const [meditation, setMeditation] = useState(meditiations[0])
+  const [objection, setObjection] = useState(objections[0])
   const {open: menuOpen, show: showMenu, hide: hideMenu} = useModal(false)
   const {open: objectionOpen, show: showObjection, hide: hideObjection} = useModal(false)
 
@@ -20,6 +21,11 @@ const Root = (props) => {
     hideMenu()
   }
 
+  const openObjection = (objectionId) => () => {
+    setObjection(objections[objectionId])
+    showObjection()
+  }
+
     return (
         <div className={styles.root}>
           <Drawer open={menuOpen} onClose={hideMenu}>
@@ -27,9 +33,9 @@ const Root = (props) => {
           </Drawer>
           <div className={styles.contentWrapper}>
             <MeditationTitle title={meditation.title} subtitle={meditation.subtitle} openMenu={showMenu} />
-            <MeditationContent id={meditation.id} openModal={showObjection}/>
+            <MeditationContent meditation={meditation} openObjection={openObjection}/>
           </div>
-          <ObjectionDrawer objection={objections[2]} open={objectionOpen} closeObjection={hideObjection}/>
+          <ObjectionDrawer objection={objection} open={objectionOpen} closeObjection={hideObjection}/>
         </div>
       )
 }

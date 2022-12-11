@@ -12,10 +12,11 @@ const ObjectionTitle = (props) => {
                 <div className={styles.title}>
                     {title}
                 </div>
-                {subtitle 
-                &&  <div className={styles.subtitle}>
+                { subtitle 
+                ?  <div className={styles.subtitle}>
                     {subtitle}
-                </div> }
+                </div> 
+                : null }
             </div>
             <BsChevronRight className={styles.closeButton} onClick={closeObjection} size='2em'/>
         </div>

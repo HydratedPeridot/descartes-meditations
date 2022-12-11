@@ -1,5 +1,5 @@
 .contentWrapper {
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -16,16 +16,6 @@
     }
 }
 
-.content {
-    word-break: break-word;
-    text-align: justify;
-    font-size: large;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-bottom: 2vh;
-    overflow-y: auto;
-}
-
 .title {
     font-size: larger;
     text-align: center;
@@ -36,3 +26,22 @@
     box-shadow: 0vw 2vh 2vh -2vh rgba(0, 0, 0, 0.4);
     position: relative;
 }
+
+.content {
+    word-break: break-word;
+    text-align: justify;
+    font-size: large;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 2vh;
+    overflow-y: auto;
+
+    .footnotes {
+        font-size: medium;
+    }
+
+    .footnotes p {
+        text-indent: 0px;
+    }
+}
+

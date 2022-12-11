@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MeditationContent.module.scss'
-import ModalText from './modaltext/ModalText';
+import ObjectedText from './objected/text/ObjectedText';
 
 const MeditationContent = (props) => {
-    const { id, openModal } = props
+    const { meditation, openObjection } = props
 
-    if (id !== 1) {
+    if (meditation.id !== 1) {
         return <div className={styles.tocome}>
             À venir!
         </div>
@@ -50,9 +50,9 @@ const MeditationContent = (props) => {
                 que j’étais habillé, que j’étais auprès du feu, quoique je fusse tout nu dedans mon lit? Il me semble bien à présent que ce n’est point avec des yeux endormis que je regarde ce papier; 
                 que cette tête que le remue n’est point assoupie ; que c’est avec dessein et de propos délibéré que j’étends cette main, et que je la sens: 
                 ce qui arrive dans le sommeil ne semble point si clair ni si distinct que tout ceci. Mais, en y pensant soigneusement, je me ressouviens d’avoir été souvent trompé, 
-                lorsque je dormais, par de semblables illusions. <ModalText openModal={openModal}>Et m’arrêtant sur cette pensée, je vois si manifestement qu’il n’y a point d’indices concluants, 
+                lorsque je dormais, par de semblables illusions. <ObjectedText openObjection={openObjection(0)}>Et m’arrêtant sur cette pensée, je vois si manifestement qu’il n’y a point d’indices concluants, 
                 ni de marques assez certaines par où l’on puisse distinguer nettement la veille d’avec le sommeil, que j’en suis tout étonné; et mon étonnement est tel, 
-                qu’il est presque capable de me persuader que je dors.</ModalText> 
+                qu’il est presque capable de me persuader que je dors.</ObjectedText> 
             </p>
             <p>
                 Supposons donc maintenant que nous sommes endormis, et que toutes ces particularités-ci, à savoir, que nous ouvrons les yeux, que nous remuons la tête, 
@@ -99,8 +99,8 @@ const MeditationContent = (props) => {
                 d’autant plus sera-t-il probable que je suis tellement imparfait que je me trompe toujours. 
                 Auxquelles raisons je n’ai certes rien à répondre, mais je suis contraint d’avouer que, de toutes les opinions que j’avais autrefois reçues en ma créance pour véritables, 
                 il n’y en a pas une de laquelle je ne puisse maintenant douter, non par aucune inconsidération ou légèreté, 
-                mais pour des raisons très fortes et mûrement considérées: <ModalText openModal={openModal}>de sorte qu’il est nécessaire que j’arrête et suspende désormais mon jugement sur ces pensées, 
-                et que je ne leur donne pas plus de créance, que je ferais à des choses qui me paraîtraient évidemment fausses si je désire trouver quelque chose de constant et d’assuré dans les sciences.</ModalText>
+                mais pour des raisons très fortes et mûrement considérées: <ObjectedText openObjection={openObjection(1)}>de sorte qu’il est nécessaire que j’arrête et suspende désormais mon jugement sur ces pensées, 
+                et que je ne leur donne pas plus de créance, que je ferais à des choses qui me paraîtraient évidemment fausses si je désire trouver quelque chose de constant et d’assuré dans les sciences.</ObjectedText>
             </p>
             <p>
                 Mais il ne suffit pas d’avoir fait ces remarques, il faut encore que je prenne soin de m’en souvenir; 
@@ -108,9 +108,9 @@ const MeditationContent = (props) => {
                 et de se rendre presque maîtresses de ma créance. Et je ne me désaccoutumerai jamais d’y acquiescer, et de prendre confiance en elles, tant que je les considérerai telles qu’elles sont en effet, 
                 c’est à savoir en quelque façon douteuses, comme je viens de montrer, et toutefois fort probables, en sorte que l’on a beaucoup plus de raison de les croire que de les nier. 
                 C’est pourquoi je pense que j’en userai plus prudemment, si, prenant un parti contraire, j’emploie tous mes soins à me tromper moi-même, 
-                feignant que toutes ces pensées sont fausses et imaginaires; <ModalText openModal={openModal}>jusques à ce qu’ayant tellement balancé mes préjugés, 
+                feignant que toutes ces pensées sont fausses et imaginaires; <ObjectedText openObjection={openObjection(1)}>jusques à ce qu’ayant tellement balancé mes préjugés, 
                 qu’ils ne puissent faire pencher mon avis plus d’un côté que d’un autre, mon jugement ne soit plus désormais maîtrisé par de mauvais usages et 
-                détourné du droit chemin qui le peut conduire a la connaissance de la vérité.</ModalText> Car je suis assuré que cependant il ne peut y avoir de péril ni d’erreur en cette voie, 
+                détourné du droit chemin qui le peut conduire a la connaissance de la vérité.</ObjectedText> Car je suis assuré que cependant il ne peut y avoir de péril ni d’erreur en cette voie, 
                 et que je ne saurais aujourd’hui trop accorder à ma défiance, puisqu’il n’est pas maintenant question d’agir, mais seulement de méditer et de connaître. 
             </p>
             <p>
@@ -119,8 +119,8 @@ const MeditationContent = (props) => {
                 Je penserai que le ciel, l’air, la terre, les couleurs, les figures, les sons et toutes les choses extérieures que nous voyons, ne sont que des illusions et tromperies, 
                 dont il se sert pour surprendre ma crédulité. Je me considérerai moi-même comme n’ayant point de mains, point d’yeux, point de chair, point de sang, comme n’ayant aucuns sens, 
                 mais croyant faussement avoir toutes ces choses. Je demeurerai obstinément attaché à cette pensée; et si, par ce moyen, il n’est pas en mon pouvoir de parvenir à la connaissance d’aucune vérité, 
-                à tout le moins il est en ma puissance de suspendre mon jugement. <ModalText openModal={openModal}>C’est pourquoi je prendrai garde soigneusement de ne point recevoir en ma croyance aucune fausseté, 
-                et préparerai si bien mon esprit à toutes les ruses de ce grand trompeur, que, pour puissant et rusé qu’il soit, il ne pourra jamais rien imposer.</ModalText>
+                à tout le moins il est en ma puissance de suspendre mon jugement. <ObjectedText openObjection={openObjection(2)}>C’est pourquoi je prendrai garde soigneusement de ne point recevoir en ma croyance aucune fausseté, 
+                et préparerai si bien mon esprit à toutes les ruses de ce grand trompeur, que, pour puissant et rusé qu’il soit, il ne pourra jamais rien imposer.</ObjectedText>
             </p>
             <p>
                 Mais ce dessein est pénible et laborieux, et une certaine paresse m’entraîne insensiblement dans le train de ma vie ordinaire. 
@@ -134,8 +134,8 @@ const MeditationContent = (props) => {
 }
 
 MeditationContent.propTypes = {
-    id: PropTypes.number.isRequired,
-    openModal: PropTypes.func.isRequired,
+    meditation: PropTypes.object.isRequired,
+    openObjection: PropTypes.func.isRequired,
 }
 
 export default MeditationContent

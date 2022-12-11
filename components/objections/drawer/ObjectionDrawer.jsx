@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GrClose } from 'react-icons/gr'
+
 import ObjectionContent from '../content/ObjectionContent';
 import styles from './ObjectionDrawer.module.scss'
 import ObjectionTitle from '../title/ObjectionTitle';
@@ -13,15 +13,15 @@ const ObjectionDrawer = (props) => {
     return <div 
         className={styles.objectionDrawer} 
         style={{
-            width: open? '60%' : '0%',
+            width: open? (objection.response ? '60%' : '45%') : '0%',
             boxShadow: open? '-1vw 0vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
             transition: `width ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`
         }}
     >
         <ObjectionTitle title={objection.title} subtitle={objection.subtitle} closeObjection={closeObjection}/>
         <div className={styles.contentWrapper}>
-            <ObjectionContent />
-            <ObjectionContent />
+            <ObjectionContent {...objection.objection}/>
+            { objection.response ? <ObjectionContent {...objection.response}/> : null }
         </div>
     </div>
 }

@@ -29,6 +29,46 @@ const objections = [
     },
     {
         id: 0,
+        title: <>Lettre de Monsieur Descartes à Monsieur Clerselier servant de réponse à un recueil des principales instances faite par Monsieur Gassendi contre les précédentes réponses</>,
+        subtitle: <>Cette lettre écrite en français par Descartes le 12 janvier 1646, a été publiée par Clerselier dans l'édition de 1647, à la suite de sa traduction des Cinquièmes Objections et Réponses.</>,
+        objection: 
+        {
+            title: <>OBJECTION FAITES À DESCARTES ET QU’IL CITE DANS LA LETTRE</>,
+            content: <p>Ils<sup>1</sup> en remarque trois contre la première méditation à savoir 
+            "1° que je demande une chose impossible en voulant que l’on quitte toutes sortes de préjugés; 
+            2° qu’en pensant les quitter on se revêt d’autres préjugés qui sont plus préjudiciables; 
+            3° et que ma méthode de douter de tout, que j’ai proposé, ne peut servir à trouver aucune vérité".</p>,
+            footnotes: 
+            [
+                <p>[1] Le "ils" renvoie certainement aux amis de Monsieur Clerselier: 
+                "Je vous ai beaucoup d’obligation de ce que, voyant que j’ai négligé de répondre au gros livre d’instance que l’auteur des cinquièmes objections à produit contre les réponses, 
+                vous avez prié quelques-uns de vos amis de recueillir les plus fortes raisons de ce livre, et m’avez envoyé l’extrait qu’ils en ont fait. 
+                Vous avez eu en cela plus de soin de ma réputation que moi même; car je vous assure qu’il m’est indifférent d'être estimé ou méprisé par ceux que de semblables raisons auront pu persuader. 
+                Les meilleurs esprits de ma connaissance qui on lu son livre m’ont témoigné qu’ils n’y avaient trouvé aucune chose qui les arretat; c’est à eux seuls que je désire satisfaire"</p>,
+            ]
+        },
+        response: 
+        {
+            title: <>RÉPONSES DÉVELOPPÉES PAR DESCARTES DANS LA MÊME LETTRE</>,
+            content: <><p>La première desquelles est fondée sur ce que l'auteur de ce livre n’a pas considéré que le mot de préjugé ne s'étend pas à toutes les notions qui sont en notre esprit, 
+            desquelles j’avoue qu’il est impossible de se défaire, mais seulement à toutes les opinions que les jugements que nous avons faits auparavant ont laissées en notre créance; 
+            et, parce que c’est une action de la volonté que de juger ou ne pas juger, ainsi que j’ai expliqué en son lieu, il est évident qu’elle est en notre pouvoir; 
+            car enfin, pour se défaire de toutes sortes de préjugés, il ne faut autre chose que se résoudre à ne rien assurer ou nier de tout ce qu’on avait assuré ou nié auparavant, 
+            sinon apres l’avoir derechef examiné, quoiqu’on ne laisse pas pour cela de retenir toutes les mêmes notions en sa mémoire. 
+            J’ai dit néanmoins qu’il y avait de la difficulté à chasser ainsi hors de sa creance tout ce qu’on y avait mis auparavant, 
+            partie à cause qu’il est besoin d’avoir quelque raison de douter avant que de s’y déterminer (c’est pourquoi j’ai proposé les principales en ma premiere Meditation), 
+            et partie aussi à cause que, quelque résolution qu’on ait prise de ne rien nier ni assurer, on s’en oublie aisément par après si on ne l’a fortement imprimée en sa mémoire; 
+            c’est pourquoi j’ai désiré qu’on y pensât avec soin.</p>
+            <p>La deuxième objection n’est qu’une supposition manifestement fausse; car, encore que j’aie dit qu’il fallait même s’efforcer de nier les choses qu’on avait trop assurées auparavant, 
+            j’ai très expressément limité que cela ne se devait faire que pendant le temps qu’on portait son attention à chercher quelque chose de plus certain que tout ce qu’on pourrait ainsi nier, 
+            pendant lequel il est évident qu’on ne saurait se revêtir d’aucun préjugé qui soit préjudiciable.</p>
+            <p>La troisième ne contient aussi  qu’une cavillation; car, bien qu’il soit vrai que le doute seul ne suffit pas pour établir aucune vérité, 
+            il ne laisse pas d'être utile à préparer l’esprit pour en établir par après, et c’est à cela seul que je l’ai employé.</p></>,
+            footnotes: []
+        }
+    },
+    {
+        id: 0,
         title: <>Réponses de l’auteur aux cinquièmes objections</>,
         subtitle: <>Traduction de Clerselier de l'édition de 1647</>,
         objection: 
@@ -57,47 +97,7 @@ const objections = [
             montre bien qu’il ne se veut pas lui même servir de cette candeur philosophiques, ni mettre en usage les raisons, mais seulement donner au choses le fard et les couleurs de la rhétorique.</p>,
             footnotes: []
         },
-        response: {}
-    },
-    {
-        id: 0,
-        title: <>Lettre de Monsieur Descartes à Monsieur Clerselier servant de réponse à un recueil des principales instances faite par Monsieur Gassendi contre les précédentes réponses</>,
-        subtitle: <>Cette lettre écrite en français par Descartes le 12 janvier 1646, a été publiée par Clerselier dans l'édition de 1647, à la suite de sa traduction des Cinquièmes Objections et Réponses.</>,
-        objection: 
-        {
-            title: <>OBJECTION FAITES À DESCARTES ET QU’IL CITE DANS LA LETTRE</>,
-            content: <p>Ils[2] en remarque trois contre la première méditation à savoir 
-            "1° que je demande une chose impossible en voulant que l’on quitte toutes sortes de préjugés; 
-            2° qu’en pensant les quitter on se revêt d’autres préjugés qui sont plus préjudiciables; 
-            3° et que ma méthode de douter de tout, que j’ai proposé, ne peut servir à trouver aucune vérité".</p>,
-            footnotes: 
-            [
-                <p>Le "ils" renvoie certainement aux amis de Monsieur Clerselier: 
-                "Je vous ai beaucoup d’obligation de ce que, voyant que j’ai négligé de répondre au gros livre d’instance que l’auteur des cinquièmes objections à produit contre les réponses, 
-                vous avez prié quelques-uns de vos amis de recueillir les plus fortes raisons de ce livre, et m’avez envoyé l’extrait qu’ils en ont fait. 
-                Vous avez eu en cela plus de soin de ma réputation que moi même; car je vous assure qu’il m’est indifférent d'être estimé ou méprisé par ceux que de semblables raisons auront pu persuader. 
-                Les meilleurs esprits de ma connaissance qui on lu son livre m’ont témoigné qu’ils n’y avaient trouvé aucune chose qui les arretat; c’est à eux seuls que je désire satisfaire"</p>,
-            ]
-        },
-        response: 
-        {
-            title: <>RÉPONSES DÉVELOPPÉES PAR DESCARTES DANS LA MÊME LETTRE</>,
-            content: <><p>La première desquelles est fondée sur ce que l'auteur de ce livre n’a pas considéré que le mot de préjugé ne s'étend pas à toutes les notions qui sont en notre esprit, 
-            desquelles j’avoue qu’il est impossible de se défaire, mais seulement à toutes les opinions que les jugements que nous avons faits auparavant ont laissées en notre créance; 
-            et, parce que c’est une action de la volonté que de juger ou ne pas juger, ainsi que j’ai expliqué en son lieu, il est évident qu’elle est en notre pouvoir; 
-            car enfin, pour se défaire de toutes sortes de préjugés, il ne faut autre chose que se résoudre à ne rien assurer ou nier de tout ce qu’on avait assuré ou nié auparavant, 
-            sinon apres l’avoir derechef examiné, quoiqu’on ne laisse pas pour cela de retenir toutes les mêmes notions en sa mémoire. 
-            J’ai dit néanmoins qu’il y avait de la difficulté à chasser ainsi hors de sa creance tout ce qu’on y avait mis auparavant, 
-            partie à cause qu’il est besoin d’avoir quelque raison de douter avant que de s’y déterminer (c’est pourquoi j’ai proposé les principales en ma premiere Meditation), 
-            et partie aussi à cause que, quelque résolution qu’on ait prise de ne rien nier ni assurer, on s’en oublie aisément par après si on ne l’a fortement imprimée en sa mémoire; 
-            c’est pourquoi j’ai désiré qu’on y pensât avec soin.</p>
-            <p>La deuxième objection n’est qu’une supposition manifestement fausse; car, encore que j’aie dit qu’il fallait même s’efforcer de nier les choses qu’on avait trop assurées auparavant, 
-            j’ai très expressément limité que cela ne se devait faire que pendant le temps qu’on portait son attention à chercher quelque chose de plus certain que tout ce qu’on pourrait ainsi nier, 
-            pendant lequel il est évident qu’on ne saurait se revêtir d’aucun préjugé qui soit préjudiciable.</p>
-            <p>La troisième ne contient aussi  qu’une cavillation; car, bien qu’il soit vrai que le doute seul ne suffit pas pour établir aucune vérité, 
-            il ne laisse pas d'être utile à préparer l’esprit pour en établir par après, et c’est à cela seul que je l’ai employé.</p></>,
-            footnotes: []
-        }
+        response: null
     },
 ]
 
