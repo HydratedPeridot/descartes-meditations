@@ -1,0 +1,44 @@
+.contentWrapper {
+    display: grid;
+    grid-template-areas: 
+        'titleobjection titleResponse'
+        'contentObjection contentResponse';
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.titleObjection,
+.titleResponse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0vw 2vh 2vh -2vh rgba(0, 0, 0, 0.4);
+    
+    .titleText {
+        font-size: larger;
+        text-align: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+
+.contentObjection,
+.contentResponse {
+    word-break: break-word;
+    text-align: justify;
+    font-size: large;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 2vh;
+    overflow-y: auto;
+
+    .footnotes {
+        font-size: medium;
+    }
+
+    .footnotes p {
+        text-indent: 0px;
+    }
+}

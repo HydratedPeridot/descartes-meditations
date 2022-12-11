@@ -19,10 +19,7 @@ const ObjectionDrawer = (props) => {
         }}
     >
         <ObjectionTitle title={objection.title} subtitle={objection.subtitle} closeObjection={closeObjection}/>
-        <div className={styles.contentWrapper}>
-            <ObjectionContent {...objection.objection}/>
-            { objection.response ? <ObjectionContent {...objection.response}/> : null }
-        </div>
+        <ObjectionContent objection={objection} />
     </div>
 }
 

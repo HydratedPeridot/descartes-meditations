@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MeditationContent.module.scss'
-import ObjectedText from './objected/text/ObjectedText';
+import ObjectedText from './objected-text/ObjectedText';
 
 const MeditationContent = (props) => {
-    const { meditation, openObjection } = props
+    const { meditation, objectionOpen, openObjection } = props
 
     if (meditation.id !== 1) {
         return <div className={styles.tocome}>
@@ -13,7 +13,10 @@ const MeditationContent = (props) => {
     }
 
     return (
-        <div className={styles.content}>
+        <div className={styles.content} style={{
+            paddingLeft: objectionOpen ? '12%' : '18vw',
+            paddingRight: objectionOpen ? '12%' : '18vw',
+        }}>
             <p>
                 Il y a déjà quelque temps que je me suis aperçu que, dès mes premières années, j’avais reçu quantité de fausses opinions pour véritables, 
                 et que ce que j’ai depuis fondé sur des principes si mal assurés, ne pouvait être que fort douteux et incertain; 
@@ -135,6 +138,7 @@ const MeditationContent = (props) => {
 
 MeditationContent.propTypes = {
     meditation: PropTypes.object.isRequired,
+    objectionOpen: PropTypes.bool.isRequired,
     openObjection: PropTypes.func.isRequired,
 }
 

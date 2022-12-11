@@ -33,7 +33,7 @@ const Root = (props) => {
           </Drawer>
           <div className={styles.contentWrapper}>
             <MeditationTitle title={meditation.title} subtitle={meditation.subtitle} openMenu={showMenu} />
-            <MeditationContent meditation={meditation} openObjection={openObjection}/>
+            <MeditationContent meditation={meditation} objectionOpen={objectionOpen} openObjection={openObjection}/>
           </div>
           <ObjectionDrawer objection={objection} open={objectionOpen} closeObjection={hideObjection}/>
         </div>

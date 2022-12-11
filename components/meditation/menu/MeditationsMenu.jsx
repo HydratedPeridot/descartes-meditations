@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GrClose } from 'react-icons/gr'
+import { BsChevronLeft } from 'react-icons/bs'
 import meditiations from '../../../ressources/meditations';
 import styles from './MeditationsMenu.module.scss'
 
@@ -9,7 +9,7 @@ const MeditationsMenu = (props) => {
 
     return (
         <div className={styles.menu}>
-            <GrClose className={styles.closeButton} onClick={closeMenu}/>
+            <BsChevronLeft className={styles.closeButton} onClick={closeMenu} size='2em'/>
             {meditiations.map((item) => {
                 return (
                     <div key={item.id} className={styles.itemWrapper} onClick={handleSelectMeditation(item)}>
