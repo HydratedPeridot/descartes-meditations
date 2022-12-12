@@ -24,8 +24,8 @@ const ObjectionTitle = (props) => {
 }
 
 ObjectionTitle.propTypes = {
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.object.isRequired,
+    subtitle: PropTypes.object,
     closeObjection: PropTypes.func.isRequired
 }
 

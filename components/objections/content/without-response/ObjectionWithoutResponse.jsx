@@ -15,7 +15,7 @@ const ObjectionWithoutResponse = (props) => {
             <div className={styles.contentObjection}>
                 {objection.content}
                 <div className={styles.footnotes}>
-                        {objection.footnotes.map((note) => note)}
+                        {objection.footnotes.map((note, key) => note)}
                 </div>
             </div>
         </div>

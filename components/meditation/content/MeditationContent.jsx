@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './MeditationContent.module.scss'
 import ObjectedText from './objected-text/ObjectedText';
 
+const transitionDuration = 300
+
 const MeditationContent = (props) => {
     const { meditation, objectionOpen, openObjection } = props
+
+    const ref = useRef(null)
 
     if (meditation.id !== 1) {
         return <div className={styles.tocome}>
@@ -12,11 +16,19 @@ const MeditationContent = (props) => {
         </div>
     }
 
+    const click = () => {
+        console.log('click!')
+        console.log(`scrollTop: ${ref.current.scrollTop}`)
+        console.log(`offsetTop: ${ref.current.offsetTop}`)
+    }
+
     return (
-        <div className={styles.content} style={{
-            paddingLeft: objectionOpen ? '12%' : '18vw',
-            paddingRight: objectionOpen ? '12%' : '18vw',
-        }}>
+        <div ref={ref} className={styles.content} style={{
+            paddingLeft: objectionOpen ? '12%' : '25vw',
+            paddingRight: objectionOpen ? '12%' : '25vw',
+            transition: `padding-left ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), padding-right ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`
+        }}
+        onClick={click}>
             <p>
                 Il y a déjà quelque temps que je me suis aperçu que, dès mes premières années, j’avais reçu quantité de fausses opinions pour véritables, 
                 et que ce que j’ai depuis fondé sur des principes si mal assurés, ne pouvait être que fort douteux et incertain; 
@@ -111,7 +123,7 @@ const MeditationContent = (props) => {
                 et de se rendre presque maîtresses de ma créance. Et je ne me désaccoutumerai jamais d’y acquiescer, et de prendre confiance en elles, tant que je les considérerai telles qu’elles sont en effet, 
                 c’est à savoir en quelque façon douteuses, comme je viens de montrer, et toutefois fort probables, en sorte que l’on a beaucoup plus de raison de les croire que de les nier. 
                 C’est pourquoi je pense que j’en userai plus prudemment, si, prenant un parti contraire, j’emploie tous mes soins à me tromper moi-même, 
-                feignant que toutes ces pensées sont fausses et imaginaires; <ObjectedText openObjection={openObjection(1)}>jusques à ce qu’ayant tellement balancé mes préjugés, 
+                feignant que toutes ces pensées sont fausses et imaginaires; <ObjectedText openObjection={openObjection(2)}>jusques à ce qu’ayant tellement balancé mes préjugés, 
                 qu’ils ne puissent faire pencher mon avis plus d’un côté que d’un autre, mon jugement ne soit plus désormais maîtrisé par de mauvais usages et 
                 détourné du droit chemin qui le peut conduire a la connaissance de la vérité.</ObjectedText> Car je suis assuré que cependant il ne peut y avoir de péril ni d’erreur en cette voie, 
                 et que je ne saurais aujourd’hui trop accorder à ma défiance, puisqu’il n’est pas maintenant question d’agir, mais seulement de méditer et de connaître. 
@@ -122,7 +134,7 @@ const MeditationContent = (props) => {
                 Je penserai que le ciel, l’air, la terre, les couleurs, les figures, les sons et toutes les choses extérieures que nous voyons, ne sont que des illusions et tromperies, 
                 dont il se sert pour surprendre ma crédulité. Je me considérerai moi-même comme n’ayant point de mains, point d’yeux, point de chair, point de sang, comme n’ayant aucuns sens, 
                 mais croyant faussement avoir toutes ces choses. Je demeurerai obstinément attaché à cette pensée; et si, par ce moyen, il n’est pas en mon pouvoir de parvenir à la connaissance d’aucune vérité, 
-                à tout le moins il est en ma puissance de suspendre mon jugement. <ObjectedText openObjection={openObjection(2)}>C’est pourquoi je prendrai garde soigneusement de ne point recevoir en ma croyance aucune fausseté, 
+                à tout le moins il est en ma puissance de suspendre mon jugement. <ObjectedText openObjection={openObjection(3)}>C’est pourquoi je prendrai garde soigneusement de ne point recevoir en ma croyance aucune fausseté, 
                 et préparerai si bien mon esprit à toutes les ruses de ce grand trompeur, que, pour puissant et rusé qu’il soit, il ne pourra jamais rien imposer.</ObjectedText>
             </p>
             <p>

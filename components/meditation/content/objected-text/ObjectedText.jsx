@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ObjectedText.module.scss'
 
 const ObjectedText = (props) => {
     const { openObjection, children } = props
 
-    return <span className={styles.modalText} onClick={openObjection}>
+    const ref = useRef(null)
+
+    const handleClick = () => {
+        openObjection()
+        setTimeout(() => ref.current.scrollIntoView({behavior: 'smooth', block: 'start'}), 200)
+    }
+
+    return <span ref={ref} className={styles.modalText} onClick={handleClick}>
         {children}
     </span>
 }
