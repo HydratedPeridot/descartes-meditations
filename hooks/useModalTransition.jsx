@@ -16,7 +16,6 @@ const useModalTransition = (open, onClose, transitionDuration) => {
     }
 
     const handleClose = (event) => {
-        event.preventDefault()
         if (event.target === event.currentTarget) {
             onClose()
         }
