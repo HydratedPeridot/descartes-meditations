@@ -15,7 +15,10 @@ const ObjectionDrawer = (props) => {
         style={{
             width: open? (objection.response ? '60%' : '45%') : '0%',
             boxShadow: open? '-1vw 0vh 5vh rgba(0, 0, 0, 0.5)' : 'none',
-            transition: `width ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`
+            transform: open? 'translateX(0px)' : 'translateX(100px)',
+            transition: `width ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), \
+            box-shadow ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1), \
+            transform ${transitionDuration}ms cubic-bezier(0.165, 0.84, 0.44, 1)` 
         }}
     >
         <ObjectionTitle title={objection.title} subtitle={objection.subtitle} closeObjection={closeObjection}/>
