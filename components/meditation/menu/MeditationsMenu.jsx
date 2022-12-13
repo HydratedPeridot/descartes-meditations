@@ -26,22 +26,32 @@ const MeditationsMenu = (props) => {
                     )})}
             </div>
             <div className={styles.authors}>
-                <a href="mailto:armelle.debonlier@ens.psl.eu" className={styles.authorLine}>
+                <a 
+                    className={styles.authorLine}
+                    href="mailto:armelle.debonlier@ens.psl.eu" 
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                >
                     <span>Armelle Debonlier</span> 
                     <AiOutlineMail /> 
                     <span>armelle.debonlier@ens.psl.eu</span>  
                 </a>
-                <a href="mailto:paul.dudnic@outlook.com" className={styles.authorLine}>
+                <a 
+                    className={styles.authorLine}
+                    href="mailto:paul.dudnic@outlook.com" 
+                    rel="noopener noreferrer" 
+                    target="_blank"
+                >
                     <span>Paul Dudnic</span> 
                     <AiOutlineMail /> 
                     <span>paul.dudnic@outlook.com</span>  
                 </a>
             </div>
             <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
                 className={styles.vercel}
+                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                rel="noopener noreferrer"
+                target="_blank"
             >
                 <span>Réalisé avec</span>
                 <span>
